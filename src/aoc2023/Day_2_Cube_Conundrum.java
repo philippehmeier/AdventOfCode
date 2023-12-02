@@ -38,8 +38,6 @@ public class Day_2_Cube_Conundrum {
 				int[] minGame = new int[3];
 	
 				for (int i = 0; i < splitSets.length; i++) {
-									
-					System.out.println("Game " + gameNo + ": " + "Set " + i + ": " + splitSets[i]);
 
 					String[] splitSetsColors = splitSets[i].split(", ");
 					String[] splitSetsColorsOrdered = new String[3];
@@ -52,10 +50,8 @@ public class Day_2_Cube_Conundrum {
 								splitSetsColorsOrdered[j] = splitSetsColors[j];
 								splitSetsColorsOrdered[j] = splitSetsColorsOrdered[j].replaceAll(cubeColors[k], "");
 								singleGameSet[k] = Integer.parseInt(splitSetsColorsOrdered[j]);
-								System.out.println("Vor IF: minGame[" + k + "] = " + minGame[k]);
 								if (singleGameSet[k] > minGame[k]) {
 									minGame[k] = singleGameSet[k];
-									System.out.println("Im IF: minSet[" + k + "] = " + minGame[k]);
 								} 
 							} 
 						}
